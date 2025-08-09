@@ -19,3 +19,18 @@ repos:
     hooks:
       - id: isort
         name: isort (python)
+
+  - repo: local
+    hooks:
+      - id: pylint
+        name: pylint
+        entry: poetry run pylint
+        language: system
+        types: [python]
+        args: [
+            "-rn", # Only display messages
+            "-sn", # Don't display the score
+            "--load-plugins=pylint_django",
+            "--django-settings-module=django_forenlims.settings",
+            "--ignore=manage.py",
+          ]

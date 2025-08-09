@@ -7,7 +7,7 @@ authors = [
 ]
 license = {text = "MIT"}
 readme = "README.md"
-requires-python = ">=3.13"
+requires-python = ">=3.13, <4.0"
 dependencies = [
     "django (>=5.2.4,<6.0.0)"
 ]
@@ -19,6 +19,8 @@ build-backend = "poetry.core.masonry.api"
 
 [tool.poetry.group.dev.dependencies]
 pre-commit = "^4.2.0"
+pylint = "^3.3.7"
+pylint-django = "^2.6.1"
 
 [tool.black]
 line-length = 120
