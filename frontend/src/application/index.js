@@ -1,6 +1,12 @@
 
 // This is the style entry file
 import "../styles/index.css";
+import { Application } from "@hotwired/stimulus";
+import { definitionsFromContext } from "@hotwired/stimulus-webpack-helpers";
+
+const application = Application.start();
+const context = require.context("../controllers", true, /\.js$/);
+application.load(definitionsFromContext(context));
 
 // We can import other JS file as we like
 import Jumbotron from "../components/jumbotron";
