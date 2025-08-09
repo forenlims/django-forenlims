@@ -14,16 +14,38 @@ repos:
       - id: black
         language_version: python3.13
 
-  - repo: https://github.com/pycqa/isort
-    rev: 6.0.1
-    hooks:
-      - id: isort
-        name: isort (python)
+  #  - repo: https://github.com/pycqa/isort
+  #    rev: 6.0.1
+  #    hooks:
+  #      - id: isort
+  #        name: isort (python)
 
   - repo: https://github.com/Riverside-Healthcare/djLint
     rev: v1.36.4
     hooks:
       - id: djlint-django
+
+  - repo: https://github.com/python-poetry/poetry-plugin-export
+    rev: "1.9.0"
+    hooks:
+      - id: poetry-export
+        args:
+          [
+            "-f",
+            "requirements.txt",
+            "-o",
+            "requirements.txt",
+            "--without-hashes",
+          ]
+  - repo: https://github.com/charliermarsh/ruff-pre-commit
+    rev: "v0.12.8"
+    hooks:
+      # run the linter with autofix
+      - id: ruff-check
+
+        args: ["--fix"]
+      # Run the formatter.
+      - id: ruff-format
 
   - repo: local
     hooks:

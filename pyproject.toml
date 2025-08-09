@@ -12,7 +12,6 @@ dependencies = [
     "django (>=5.2.4,<6.0.0)"
 ]
 
-
 [build-system]
 requires = ["poetry-core>=2.0.0,<3.0.0"]
 build-backend = "poetry.core.masonry.api"
@@ -36,3 +35,20 @@ line_length = 120
 [tool.djlint]
 profile="django"
 ignore = "H031"
+
+[tool.ruff]
+line-length = 120
+indent-width = 4
+target-version = "py313"
+select =[
+  "DJ",
+  "I",
+  "N",
+  "E",
+  "W",
+  "PL",
+  "RUF",
+]
+extend-exclude = [
+  "manage.py"
+]
