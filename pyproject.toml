@@ -26,6 +26,10 @@ pylint = "^3.3.7"
 pylint-django = "^2.6.1"
 django-debug-toolbar = "6.0.0"
 
+
+[tool.poetry.group.test.dependencies]
+pytest-django = "^4.11.1"
+
 [tool.black]
 line-length = 120
 target-version = ['py313']
@@ -58,3 +62,11 @@ extend-exclude = [
   "manage.py"
 ]
 extend-ignore = [ "RUF012" ]
+
+[tool.pytest.ini_options]
+DJANGO_SETTINGS_MODULE = "django_forenlims.settings"
+python_files = [
+    "tests.py",
+    "test_*.py",
+    "*_tests.py",
+]
