@@ -1,0 +1,55 @@
+{
+  "name": "django_forenlims",
+  "version": "0.0.1",
+  "description": "Data Management System for Forensic Laboratories",
+  "scripts": {
+    "build": "cross-env NODE_ENV=production webpack --config frontend/webpack/webpack.config.prod.js",
+    "start": "webpack serve --config frontend/webpack/webpack.config.dev.js",
+    "watch": "webpack --watch --config frontend/webpack/webpack.config.watch.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/onkeld/django-forenlims"
+  },
+  "keywords": [
+    "Forensics",
+    "LIMS",
+    "Data Management"
+  ],
+  "author": "Daniel Zaumsegel",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/onkeld/django-forenlims/issues"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.20.5",
+    "@babel/eslint-parser": "^7.26.5",
+    "@babel/plugin-transform-class-properties": "^7.25.9",
+    "@babel/plugin-syntax-dynamic-import": "^7.8.3",
+    "@babel/preset-env": "^7.26.7",
+    "babel-loader": "^9.2.1",
+    "clean-webpack-plugin": "^4.0.0",
+    "copy-webpack-plugin": "^12.0.2",
+    "cross-env": "^7.0.3",
+    "css-loader": "^7.1.2",
+    "eslint": "^9.20.1",
+    "eslint-webpack-plugin": "^4.2.0",
+    "mini-css-extract-plugin": "^2.9.2",
+    "postcss-loader": "^8.0.0",
+    "postcss-preset-env": "^10.0.3",
+    "tailwindcss": "^4.0.3",
+    "@tailwindcss/postcss": "^4.0.3",
+    "style-loader": "^4.0.0",
+    "stylelint": "^16.14.1",
+    "stylelint-config-standard": "^37.0.0",
+    "stylelint-webpack-plugin": "^5.0.1",
+    "webpack": "^5.97.1",
+    "webpack-assets-manifest": "^5.2.1",
+    "webpack-cli": "^6.0.1",
+    "webpack-dev-server": "^5.2.0",
+    "webpack-merge": "^6.0.1"
+  },
+  "dependencies": {
+    "core-js": "^3.37.0"
+  }
+}

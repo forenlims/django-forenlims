@@ -42,6 +42,7 @@ INSTALLED_APPS = [
     "allauth",
     "allauth.account",
     "static_pages",
+    "webpack_boilerplate",
 ]
 
 MIDDLEWARE = [
