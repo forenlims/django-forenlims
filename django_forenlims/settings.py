@@ -145,3 +145,13 @@ ACCOUNT_LOGIN_METHODS = {"username"}
 ACCOUNT_SIGNUP_FIELDS = ["email*", "username*", "password1*", "password2*"]
 ACCOUNT_UNIQUE_EMAIL = True
 ACCOUNT_SESSION_REMEMBER = True
+
+STATICFILES_DIRS = [
+    BASE_DIR.joinpath("frontend/build"),
+]
+
+STATIC_ROOT = BASE_DIR.joinpath('static')
+
+WEBPACK_LOADER = {
+    "MANIFEST_FILE": BASE_DIR.joinpath("frontend/build/manifest.json"),
+}

@@ -16,12 +16,15 @@ module.exports = merge(common, {
     publicPath: "http://localhost:9091/",
   },
   devServer: {
-    hot: true,
     host: "0.0.0.0",
     port: 9091,
     headers: {
       "Access-Control-Allow-Origin": "*",
     },
+    watchFiles: [
+      Path.join(__dirname, '../../**/*.py'),
+      Path.join(__dirname, '../../templates/**/*.html'),
+    ],
     devMiddleware: {
       writeToDisk: true,
     },

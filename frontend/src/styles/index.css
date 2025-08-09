@@ -6,7 +6,7 @@
   background-size: cover;
 }
 
-@layer components{
+@layer components {
   .btn-blue {
     @apply inline-flex items-center;
     @apply px-4 py-2;
