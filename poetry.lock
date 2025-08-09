@@ -26,7 +26,7 @@ version = "3.9.1"
 description = "ASGI specs, helper code, and adapters"
 optional = false
 python-versions = ">=3.9"
-groups = ["main", "dev"]
+groups = ["main", "dev", "test"]
 files = [
     {file = "asgiref-3.9.1-py3-none-any.whl", hash = "sha256:f3bba7092a48005b5f5bacd747d36ee4a5a61f4a269a6df590b43144355ebd2c"},
     {file = "asgiref-3.9.1.tar.gz", hash = "sha256:a5ab6582236218e5ef1648f242fd9f10626cfd4de8dc377db215d5d5098e3142"},
@@ -372,7 +372,7 @@ version = "5.2.5"
 description = "A high-level Python web framework that encourages rapid development and clean, pragmatic design."
 optional = false
 python-versions = ">=3.10"
-groups = ["main", "dev"]
+groups = ["main", "dev", "test"]
 files = [
     {file = "django-5.2.5-py3-none-any.whl", hash = "sha256:2b2ada0ee8a5ff743a40e2b9820d1f8e24c11bac9ae6469cd548f0057ea6ddcd"},
     {file = "django-5.2.5.tar.gz", hash = "sha256:0745b25681b129a77aae3d4f6549b62d3913d74407831abaa0d9021a03954bae"},
@@ -685,6 +685,25 @@ files = [
     {file = "mdurl-0.1.2-py3-none-any.whl", hash = "sha256:84008a41e51615a49fc9966191ff91509e3c40b939176e643fd50a5c2196b8f8"},
     {file = "mdurl-0.1.2.tar.gz", hash = "sha256:bb413d29f5eea38f31dd4754dd7377d4465116fb207585f97bf925588687c1ba"},
 ]
+
+[[package]]
+name = "model-bakery"
+version = "1.20.5"
+description = "Smart object creation facility for Django."
+optional = false
+python-versions = ">=3.8"
+groups = ["test"]
+files = [
+    {file = "model_bakery-1.20.5-py3-none-any.whl", hash = "sha256:796e0b7fa6bf2acc09feaadce40c6bcc13e5b55c5bdff9f76e87ceb64f736070"},
+    {file = "model_bakery-1.20.5.tar.gz", hash = "sha256:107b3efb8889baac83cae0e2d81465903b69a70eeb99ecfd0929d959a653ab90"},
+]
+
+[package.dependencies]
+django = ">=4.2"
+
+[package.extras]
+docs = ["myst-parser", "sphinx", "sphinx-rtd-theme"]
+test = ["black", "coverage", "mypy", "pillow", "pytest", "pytest-django", "ruff"]
 
 [[package]]
 name = "nodeenv"
@@ -1088,7 +1107,7 @@ version = "0.5.3"
 description = "A non-validating SQL parser."
 optional = false
 python-versions = ">=3.8"
-groups = ["main", "dev"]
+groups = ["main", "dev", "test"]
 files = [
     {file = "sqlparse-0.5.3-py3-none-any.whl", hash = "sha256:cf2196ed3418f3ba5de6af7e82c694a9fbdbfecccdfc72e281548517081f16ca"},
     {file = "sqlparse-0.5.3.tar.gz", hash = "sha256:09f67787f56a0b16ecdbde1bfc7f5d9c3371ca683cfeaa8e6ff60b4807ec9272"},
@@ -1140,7 +1159,7 @@ version = "2025.2"
 description = "Provider of IANA time zone data"
 optional = false
 python-versions = ">=2"
-groups = ["main", "dev"]
+groups = ["main", "dev", "test"]
 markers = "sys_platform == \"win32\""
 files = [
     {file = "tzdata-2025.2-py2.py3-none-any.whl", hash = "sha256:1a403fada01ff9221ca8044d701868fa132215d84beb92242d9acd2147f667a8"},
@@ -1189,4 +1208,4 @@ test = ["covdefaults (>=2.3)", "coverage (>=7.2.7)", "coverage-enable-subprocess
 [metadata]
 lock-version = "2.1"
 python-versions = ">=3.13, <4.0"
-content-hash = "f611667441f30f493f4a1392d699fe52cb0892894f5f7c8b6f75371c0ff9a884"
+content-hash = "46ae4267c4dcbed4c5ed3175ce960368f34bfddc67cfcdf2a555e18e241ddb7e"
