@@ -29,6 +29,8 @@ django-debug-toolbar = "6.0.0"
 
 [tool.poetry.group.test.dependencies]
 pytest-django = "^4.11.1"
+pytest-cov = "^6.2.1"
+pytest-xdist = "^3.8.0"
 
 [tool.black]
 line-length = 120
