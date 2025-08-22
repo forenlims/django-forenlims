@@ -48,4 +48,5 @@ jobs:
     #              run test suite
     #----------------------------------------------
     - name: Run Tests
+      source .venv/bin/activate
       run: python3 manage.py test
