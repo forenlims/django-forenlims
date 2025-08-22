@@ -51,6 +51,8 @@ jobs:
     #              run test suite
     #----------------------------------------------
     - name: Run Tests
+      env: # Or as an environment variable
+        SECRET_KEY: ${{ secrets.DJANGO_SECRET_KEY }}
       run: |
         source .venv/bin/activate
         python3 manage.py test
