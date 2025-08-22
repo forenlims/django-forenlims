@@ -51,10 +51,6 @@ jobs:
     #              run test suite
     #----------------------------------------------
     - name: Run Tests
-      uses: actions/cache@v4
-      with:
-        path: .venv
-        key: venv-${{ runner.os }}-${{ steps.setup-python.outputs.python-version }}-${{ hashFiles('**/poetry.lock') }}
       run: |
         source .venv/bin/activate
         python3 manage.py test
