@@ -24,8 +24,8 @@ jobs:
       with:
         version: latest
         virtualenvs-create: true
-        virtualenvs-in-project: false
-        virtualenvs-path: ~/my-custom-path
+        virtualenvs-in-project: true
+        virtualenvs-path: ~/.venv
         installer-parallel: true
     - name: Load cached venv
       id: cached-poetry-dependencies
